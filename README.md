@@ -1,3 +1,6 @@
+# About
+Python wrapper for extracting info about Keyboard, Mouse and Ease of Access settings from memory using Windows Api. Not fully object oriented, just something to quickly access and display the data.
+
 # Basic use
 * Import the file into your python project
 ```

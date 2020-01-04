@@ -251,13 +251,15 @@ class pySystemParametersInfoW():
 				ctypes.byref(uiActionStruct),
 				0
 				)
-
+		
+		#dwFlags is returned as an offset from 268435456 (0)
+		dwFlags = uiActionStruct.dwFlags - 268435456
 		flagResult = self.resolveFlags(uiActionStruct.dwFlags, flagsDict)
 
 		if result:
 			print()
 			print(f'{WinParamName}')
-			print(f"\tdwFlags: {uiActionStruct.dwFlags}, Default: 62")
+			print(f"\tdwFlags: {dwFlags} ({uiActionStruct.dwFlags}), Default: 62")
 			print(f"\t\tEnabled Features")
 			for k in flagResult.keys():
 				print(f"\t\t\t{k}")

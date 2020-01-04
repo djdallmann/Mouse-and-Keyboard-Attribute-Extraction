@@ -254,7 +254,7 @@ class pySystemParametersInfoW():
 		
 		#dwFlags is returned as an offset from 268435456 (0)
 		dwFlags = uiActionStruct.dwFlags - 268435456
-		flagResult = self.resolveFlags(uiActionStruct.dwFlags, flagsDict)
+		flagResult = self.resolveFlags(dwFlags, flagsDict)
 
 		if result:
 			print()
